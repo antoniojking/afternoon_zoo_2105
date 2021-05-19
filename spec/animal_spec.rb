@@ -31,4 +31,11 @@ RSpec.describe Animal do
 
     expect(animal.age_in_days).to eq(175)
   end
+
+  it 'can be fed and gains weight' do
+    animal = Animal.new("Sean Otter", 10, 25)
+    animal.feed!(2)
+
+    expect(animal.weight).to eq("12 pounds")
+  end
 end
